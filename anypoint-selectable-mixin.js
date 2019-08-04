@@ -509,6 +509,8 @@ export const AnypointSelectableMixin = (base) =>
       // Let other interested parties know about the change so that
       // we don't have to recreate mutation observers everywhere.
       const config = {
+        bubbles: true,
+        composed: true,
         detail: mutationsList
       };
       this.dispatchEvent(new CustomEvent('children-changed', config));
@@ -694,6 +696,8 @@ export const AnypointSelectableMixin = (base) =>
       }
       this._selectionChange();
       const opts = {
+        bubbles: true,
+        composed: true,
         detail: {
           item
         }
@@ -732,6 +736,8 @@ export const AnypointSelectableMixin = (base) =>
     _itemActivate(value, item) {
       const opts = {
         cancelable: true,
+        bubbles: true,
+        composed: true,
         detail: {
           selected: value,
           item
