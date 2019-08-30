@@ -501,7 +501,7 @@ export const AnypointSelectableMixin = (base) =>
     _mutationHandler(mutationsList) {
       this._updateItems();
       this._updateSelected();
-      for(let mutation of mutationsList) {
+      for(const mutation of mutationsList) {
         if (mutation.type === 'childList') {
           this._checkRemovedSlot(mutation.removedNodes);
         }
