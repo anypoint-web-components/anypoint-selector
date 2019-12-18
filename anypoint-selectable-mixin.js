@@ -204,11 +204,11 @@ export const AnypointSelectableMixin = (base) =>
       }
       this._updateSelected(value);
       this.dispatchEvent(
-        new CustomEvent('selected-changed', {
-          detail: {
-            value
-          }
-        })
+          new CustomEvent('selected-changed', {
+            detail: {
+              value
+            }
+          })
       );
     }
 
@@ -232,11 +232,11 @@ export const AnypointSelectableMixin = (base) =>
         this.requestUpdate('_items', value);
       }
       this.dispatchEvent(
-        new CustomEvent('items-changed', {
-          detail: {
-            value
-          }
-        })
+          new CustomEvent('items-changed', {
+            detail: {
+              value
+            }
+          })
       );
     }
 
@@ -260,11 +260,11 @@ export const AnypointSelectableMixin = (base) =>
         this.requestUpdate('_selectedItem', value);
       }
       this.dispatchEvent(
-        new CustomEvent('selecteditem-changed', {
-          detail: {
-            value
-          }
-        })
+          new CustomEvent('selecteditem-changed', {
+            detail: {
+              value
+            }
+          })
       );
     }
 
@@ -501,7 +501,7 @@ export const AnypointSelectableMixin = (base) =>
     _mutationHandler(mutationsList) {
       this._updateItems();
       this._updateSelected();
-      for(const mutation of mutationsList) {
+      for (const mutation of mutationsList) {
         if (mutation.type === 'childList') {
           this._checkRemovedSlot(mutation.removedNodes);
         }
@@ -670,7 +670,7 @@ export const AnypointSelectableMixin = (base) =>
     }
 
     _valueForItem(item) {
-      if (!item) {
+      if (!item && item !== 0) {
         return null;
       }
       if (!this.attrForSelected) {
