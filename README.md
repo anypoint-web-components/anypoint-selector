@@ -1,6 +1,6 @@
 [![Published on NPM](https://img.shields.io/npm/v/@anypoint-web-components/anypoint-selector.svg)](https://www.npmjs.com/package/@anypoint-web-components/anypoint-selector)
 
-[![Build Status](https://travis-ci.org/anypoint-web-components/anypoint-selector.svg?branch=stage)](https://travis-ci.org/anypoint-web-components/anypoint-selector)
+[![Build Status](https://travis-ci.com/anypoint-web-components/anypoint-selector.svg)](https://travis-ci.com/anypoint-web-components/anypoint-selector)
 
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/anypoint-web-components/anypoint-selector)
 
@@ -89,7 +89,7 @@ class SampleElement extends LitElement {
 customElements.define('sample-element', SampleElement);
 ```
 
-### Development
+## Development
 
 ```sh
 git clone https://github.com/anypoint-web-components/anypoint-selector

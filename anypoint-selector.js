@@ -1,3 +1,3 @@
-import { AnypointSelector } from './AnypointSelector.js';
+import { AnypointSelector } from './src/AnypointSelector.js';
 
 window.customElements.define('anypoint-selector', AnypointSelector);
