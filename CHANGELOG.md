@@ -34,3 +34,18 @@
 * updated Travis configuration to connect to Sauce Labs [1517688](https://github.com/anypoint-web-components/anypoint-selector/commit/1517688a3a55bb49d8e8f1a1ab61860c19361df2) by Pawel
 
 
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/anypoint-web-components/anypoint-selector/compare/1.0.3...1.1.1) (2020-05-17)
+
+### Build
+
+* bumping version [797312b](https://github.com/anypoint-web-components/anypoint-selector/commit/797312bc04092a6cd312b87628478ebb3f3819d4) by Pawel
+
+
+### Update
+
+* adding index export to types [5ed747a](https://github.com/anypoint-web-components/anypoint-selector/commit/5ed747a9865f9790893ef79f7ee4f817e037a718) by Pawel
+* [ci skip] automated merge master->stage. syncing main branches [7c22302](https://github.com/anypoint-web-components/anypoint-selector/commit/7c223021f18c0bea71acf94ecc4c630f703b7528) by Ci agent
+* upgrading to open-wc standards [b1e34ca](https://github.com/anypoint-web-components/anypoint-selector/commit/b1e34ca533b10e677bc78ae51aba66b13451a48d) by Pawel
+
+
