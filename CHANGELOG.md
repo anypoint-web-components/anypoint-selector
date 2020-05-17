@@ -49,3 +49,18 @@
 * upgrading to open-wc standards [b1e34ca](https://github.com/anypoint-web-components/anypoint-selector/commit/b1e34ca533b10e677bc78ae51aba66b13451a48d) by Pawel
 
 
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/anypoint-web-components/anypoint-selector/compare/1.1.0...1.1.2) (2020-05-17)
+
+### Build
+
+* bumping version [797312b](https://github.com/anypoint-web-components/anypoint-selector/commit/797312bc04092a6cd312b87628478ebb3f3819d4) by Pawel
+
+
+### Update
+
+* fixing types for multi selector mixin [0bb1244](https://github.com/anypoint-web-components/anypoint-selector/commit/0bb124429b5b03a6f938d3b00a43265ef9f49b39) by Pawel
+* [ci skip] automated merge master->stage. syncing main branches [cc2ed03](https://github.com/anypoint-web-components/anypoint-selector/commit/cc2ed03a5160e4ee8590fd6763712f2b3becbecb) by Ci agent
+* adding index export to types [5ed747a](https://github.com/anypoint-web-components/anypoint-selector/commit/5ed747a9865f9790893ef79f7ee4f817e037a718) by Pawel
+
+
