@@ -1,6 +1,6 @@
-import { SelectableMixin } from './SelectableMixin';
+import { SelectableMixinConstructor } from './SelectableMixin';
 
-declare function MultiSelectableMixin<T extends new (...args: any[]) => {}>(base: T): T & MultiSelectableMixinConstructor & SelectableMixin;
+declare function MultiSelectableMixin<T extends new (...args: any[]) => {}>(base: T): T & SelectableMixinConstructor & MultiSelectableMixinConstructor;
 interface MultiSelectableMixinConstructor {
   new(...args: any[]): MultiSelectableMixin;
 }
