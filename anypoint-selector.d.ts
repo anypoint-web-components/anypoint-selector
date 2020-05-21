@@ -1,4 +1,4 @@
-import {AnypointSelector} from './src/AnypointSelector.js';
+import {AnypointSelector} from './src/AnypointSelector';
 
 declare global {
   interface HTMLElementTagNameMap {
