@@ -64,3 +64,25 @@
 * adding index export to types [5ed747a](https://github.com/anypoint-web-components/anypoint-selector/commit/5ed747a9865f9790893ef79f7ee4f817e037a718) by Pawel
 
 
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/anypoint-web-components/anypoint-selector/compare/1.1.1...1.1.3) (2020-06-19)
+
+### Build
+
+* bumping version [58d13f0](https://github.com/anypoint-web-components/anypoint-selector/commit/58d13f04ac5685146840a0a51c33436760b82705) by Pawel
+
+
+### Update
+
+* restoring previous version of eslint [1b5428f](https://github.com/anypoint-web-components/anypoint-selector/commit/1b5428f4d862efffb5e8fece01be562158dacb7c) by Pawel
+* removing `js` from d.ts file [6689b0f](https://github.com/anypoint-web-components/anypoint-selector/commit/6689b0f4a66ff001a4914ee2f81e3142286c048f) by Paweł Psztyć
+* [ci skip] automated merge master->stage. syncing main branches [41e8110](https://github.com/anypoint-web-components/anypoint-selector/commit/41e81103ff60c9013e34fd6e1ce967482aad0fcc) by Ci agent
+* fixing types for multi selector mixin [0bb1244](https://github.com/anypoint-web-components/anypoint-selector/commit/0bb124429b5b03a6f938d3b00a43265ef9f49b39) by Pawel
+* [ci skip] automated merge master->stage. syncing main branches [cc2ed03](https://github.com/anypoint-web-components/anypoint-selector/commit/cc2ed03a5160e4ee8590fd6763712f2b3becbecb) by Ci agent
+
+
+### Features
+
+* adding new events API [68d5591](https://github.com/anypoint-web-components/anypoint-selector/commit/68d55912bb4a350ab0a11c639e7758a7753a772c) by Pawel
+
+
