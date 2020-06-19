@@ -218,6 +218,8 @@ const mxFunction = (base) => {
           },
         })
       );
+      // new events API. Keep the above for compatibility
+      this.dispatchEvent(new CustomEvent('selectedchange'));
     }
 
     get items() {
@@ -248,6 +250,8 @@ const mxFunction = (base) => {
           },
         })
       );
+      // new events API. Keep the above for compatibility
+      this.dispatchEvent(new CustomEvent('itemschange'));
     }
 
     get selectedItem() {
@@ -278,6 +282,8 @@ const mxFunction = (base) => {
           },
         })
       );
+      // new events API. Keep the above for compatibility
+      this.dispatchEvent(new CustomEvent('selecteditemchange'));
     }
 
     get activateEvent() {
@@ -325,7 +331,23 @@ const mxFunction = (base) => {
     }
 
     /**
-     * @return {EventListener} Previously registered handler for `selecteditem-changed` event
+     * @return {EventListener} Previously registered handler for `selected-changed` event
+     */
+    get onselectedchange() {
+      return this._onselectedchange;
+    }
+
+    /**
+     * Registers a callback function for `selectedchange` event
+     * @param {EventListener} value A callback to register. Pass `null` or `undefined`
+     * to clear the listener.
+     */
+    set onselectedchange(value) {
+      this._registerCallback('selectedchange', value);
+    }
+
+    /**
+     * @return {EventListener} Previously registered handler for `selectedchange` event
      */
     get onselecteditemchanged() {
       return this['_onselecteditem-changed'];
@@ -338,6 +360,22 @@ const mxFunction = (base) => {
      */
     set onselecteditemchanged(value) {
       this._registerCallback('selecteditem-changed', value);
+    }
+
+    /**
+     * @return {EventListener} Previously registered handler for `selecteditemchange` event
+     */
+    get onselecteditemchange() {
+      return this._onselecteditemchange;
+    }
+
+    /**
+     * Registers a callback function for `selecteditemchange` event
+     * @param {EventListener} value A callback to register. Pass `null` or `undefined`
+     * to clear the listener.
+     */
+    set onselecteditemchange(value) {
+      this._registerCallback('selecteditemchange', value);
     }
 
     /**
@@ -354,6 +392,22 @@ const mxFunction = (base) => {
      */
     set onitemschanged(value) {
       this._registerCallback('items-changed', value);
+    }
+
+    /**
+     * @return {EventListener} Previously registered handler for `itemschange` event
+     */
+    get onitemschange() {
+      return this._onitemschange;
+    }
+
+    /**
+     * Registers a callback function for `itemschange` event
+     * @param {EventListener} value A callback to register. Pass `null` or `undefined`
+     * to clear the listener.
+     */
+    set onitemschange(value) {
+      this._registerCallback('itemschange', value);
     }
 
     /**
@@ -421,6 +475,10 @@ const mxFunction = (base) => {
       this._selection = new AnypointSelection(this._applySelection.bind(this));
       this._mutationHandler = this._mutationHandler.bind(this);
       this._slotchangeHandler = this._slotchangeHandler.bind(this);
+
+      this._onselectedchange = null;
+      this._onselecteditemchange = null;
+      this._onitemschange = null;
     }
 
     connectedCallback() {

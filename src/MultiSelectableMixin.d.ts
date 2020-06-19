@@ -27,9 +27,19 @@ interface MultiSelectableMixin {
   onselectedvalueschanged: EventListener|null;
 
   /**
+   * Registers a callback function for `selectedvalueschange` event
+   */
+  onselectedvalueschange: EventListener|null;
+
+  /**
    * Registers a callback function for `selecteditems-changed` event
    */
   onselecteditemschanged: EventListener|null;
+
+  /**
+   * Registers a callback function for `selecteditemschange` event
+   */
+  onselecteditemschange: EventListener|null;
 
   constructor(): void;
 

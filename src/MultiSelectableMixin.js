@@ -57,6 +57,8 @@ const mxFunction = (base) => {
           },
         })
       );
+      // new events API. Keep the above for compatibility
+      this.dispatchEvent(new CustomEvent('selectedvalueschange'));
     }
 
     /**
@@ -84,6 +86,8 @@ const mxFunction = (base) => {
           },
         })
       );
+      // new events API. Keep the above for compatibility
+      this.dispatchEvent(new CustomEvent('selecteditemschange'));
     }
 
     /**
@@ -103,6 +107,22 @@ const mxFunction = (base) => {
     }
 
     /**
+     * @return {EventListener} Previously registered handler for `selectedvalueschange` event
+     */
+    get onselectedvalueschange() {
+      return this._onselectedvalueschange;
+    }
+
+    /**
+     * Registers a callback function for `selectedvalueschange` event
+     * @param {EventListener} value A callback to register. Pass `null` or `undefined`
+     * to clear the listener.
+     */
+    set onselectedvalueschange(value) {
+      this._registerCallback('selectedvalueschange', value);
+    }
+
+    /**
      * @return {EventListener} Previously registered handler for `selecteditems-changed` event
      */
     get onselecteditemschanged() {
@@ -118,11 +138,29 @@ const mxFunction = (base) => {
       this._registerCallback('selecteditems-changed', value);
     }
 
+    /**
+     * @return {EventListener} Previously registered handler for `selecteditemschange` event
+     */
+    get onselecteditemschange() {
+      return this._onselecteditemschange;
+    }
+
+    /**
+     * Registers a callback function for `selecteditemschange` event
+     * @param {EventListener} value A callback to register. Pass `null` or `undefined`
+     * to clear the listener.
+     */
+    set onselecteditemschange(value) {
+      this._registerCallback('selecteditemschange', value);
+    }
+
     constructor() {
       super();
       this.multi = false;
       this._selectedValues = [];
       this._selectedItems = [];
+      this._onselectedvalueschange = null;
+      this._onselecteditemschange = null;
     }
 
     /**

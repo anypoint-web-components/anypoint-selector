@@ -71,6 +71,10 @@ interface SelectableMixin {
    * @returns Previously registered handler for `selected-changed` event
    */
   onselectedchanged: EventListener;
+  /**
+   * @returns Previously registered handler for `selectedchange` event
+   */
+  onselectedchange: EventListener;
 
   /**
    * @returns Previously registered handler for `selecteditem-changed` event
@@ -78,9 +82,19 @@ interface SelectableMixin {
   onselecteditemchanged: EventListener;
 
   /**
+   * @returns Previously registered handler for `selecteditemchange` event
+   */
+  onselecteditemchange: EventListener;
+
+  /**
    * @returns Previously registered handler for `items-changed` event
    */
   onitemschanged: EventListener;
+
+  /**
+   * @returns Previously registered handler for `itemschange` event
+   */
+  onitemschange: EventListener;
 
   /**
    * @returns Previously registered handler for `select` event
