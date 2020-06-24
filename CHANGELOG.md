@@ -86,3 +86,29 @@
 * adding new events API [68d5591](https://github.com/anypoint-web-components/anypoint-selector/commit/68d55912bb4a350ab0a11c639e7758a7753a772c) by Pawel
 
 
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/anypoint-web-components/anypoint-selector/compare/1.1.2...1.1.4) (2020-06-24)
+
+### Build
+
+* bumping version [58d13f0](https://github.com/anypoint-web-components/anypoint-selector/commit/58d13f04ac5685146840a0a51c33436760b82705) by Pawel
+
+
+### Update
+
+* [ci skip] automated merge master->stage. syncing main branches [b2d2f2b](https://github.com/anypoint-web-components/anypoint-selector/commit/b2d2f2b66a27380c3a37d9eab488ac8b7448da78) by Ci agent
+* restoring previous version of eslint [1b5428f](https://github.com/anypoint-web-components/anypoint-selector/commit/1b5428f4d862efffb5e8fece01be562158dacb7c) by Pawel
+* removing `js` from d.ts file [6689b0f](https://github.com/anypoint-web-components/anypoint-selector/commit/6689b0f4a66ff001a4914ee2f81e3142286c048f) by Paweł Psztyć
+* [ci skip] automated merge master->stage. syncing main branches [41e8110](https://github.com/anypoint-web-components/anypoint-selector/commit/41e81103ff60c9013e34fd6e1ce967482aad0fcc) by Ci agent
+
+
+### Features
+
+* adding new events API [68d5591](https://github.com/anypoint-web-components/anypoint-selector/commit/68d55912bb4a350ab0a11c639e7758a7753a772c) by Pawel
+
+
+### Bug Fixes
+
+* fixing type export [6db2376](https://github.com/anypoint-web-components/anypoint-selector/commit/6db2376a222a5cde72a0959f9733963409c57ece) by Pawel
+
+
