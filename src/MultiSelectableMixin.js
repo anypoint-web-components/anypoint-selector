@@ -13,6 +13,7 @@ const mxFunction = (base) => {
       return {
         /**
          * If true, multiple selections are allowed.
+         * @attribute
          */
         multi: { type: Boolean },
         /**
@@ -62,7 +63,7 @@ const mxFunction = (base) => {
     }
 
     /**
-     * @return {Array<HTMLElement>} An array of currently selected items.
+     * @return {any[]} An array of currently selected items.
      */
     get selectedItems() {
       return this._selectedItems;

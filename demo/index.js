@@ -18,7 +18,7 @@ class ComponentDemo extends ArcDemoPage {
     ].forEach((item) => {
       Object.defineProperty(this, item, {
         get() {
-          return this['_' + item];
+          return this[`_${  item}`];
         },
         set(newValue) {
           this._setObservableProperty(item, newValue);
@@ -31,7 +31,7 @@ class ComponentDemo extends ArcDemoPage {
 
   _addDynamicItem() {
     const items = this.dynamicItems;
-    items.push('item ' + (items.length + 1));
+    items.push(`item ${  items.length + 1}`);
     this.dynamicItems = [...items];
   }
 
@@ -95,11 +95,11 @@ class ComponentDemo extends ArcDemoPage {
     </arc-demo-helper>
 
     <h3>
-      Use <code>selectedattribute</code> add an attribute to selected item
+      Use <code>selectedAttribute</code> add an attribute to selected item
     </h3>
     <arc-demo-helper>
       <template>
-        <anypoint-selector selectedattribute="selected-item">
+        <anypoint-selector selectedAttribute="selected-item">
           <div>Foo</div>
           <div>Bar</div>
           <div>Baz</div>
@@ -115,11 +115,11 @@ class ComponentDemo extends ArcDemoPage {
     </arc-demo-helper>
 
     <h3>
-      Use <code>fallbackselection</code> to instruct which should be selected when selection not sound
+      Use <code>fallbackSelection</code> to instruct which should be selected when selection not sound
     </h3>
     <arc-demo-helper>
       <template>
-        <anypoint-selector fallbackselection="0" selected="10">
+        <anypoint-selector fallbackSelection="0" selected="10">
           <div>Foo</div>
           <div>Bar</div>
           <div>Baz</div>

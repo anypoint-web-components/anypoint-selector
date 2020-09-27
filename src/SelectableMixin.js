@@ -732,7 +732,7 @@ const mxFunction = (base) => {
     }
 
     /**
-     * Applies selection to the `seleced` item
+     * Applies selection to the `selected` item
      * @param {string|number} selected Currently selected value
      */
     _selectSelected(selected) {
@@ -863,7 +863,7 @@ const mxFunction = (base) => {
 
     /**
      * Applies current selection to the selected item.
-     * Do not remove this function. It is used in mult selectable to
+     * Do not remove this function. It is used in multi selectable to
      * update multi selection.
      */
     _selectionChange() {

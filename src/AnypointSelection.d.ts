@@ -1,10 +1,7 @@
-
-export {AnypointSelection};
-
 /**
  * Port of `@polymer/iron-selector/iron-selection.js`.
  */
-declare class AnypointSelection {
+export declare class AnypointSelection {
   multi: boolean;
   selection: any[];
   selectCallback: Function;

@@ -1,0 +1,210 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "anypoint-selector",
+      "path": "./anypoint-selector.js",
+      "attributes": [
+        {
+          "name": "multi",
+          "description": "If true, multiple selections are allowed.",
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "attrForSelected",
+          "description": "If you want to use an attribute value or property of an element for\n`selected` instead of the index, set this to the name of the attribute\nor property. Hyphenated values are converted to camel case when used to\nlook up the property of a selectable element. Camel cased values are\n*not* converted to hyphenated values for attribute lookup. It's\nrecommended that you provide the hyphenated form of the name so that\nselection works in both cases. (Use `attr-or-property-name` instead of\n`attrOrPropertyName`.)",
+          "type": "string"
+        },
+        {
+          "name": "selected",
+          "description": "Gets or sets the selected element. The default is to use the index of the item.",
+          "type": "string | number"
+        },
+        {
+          "name": "activateEvent",
+          "description": "The event that fires from items when they are selected. Selectable\nwill listen for this event from items and update the selection state.\nSet to empty string to listen to no events.",
+          "type": "string",
+          "default": "\"click\""
+        },
+        {
+          "name": "selectable",
+          "description": "This is a CSS selector string.  If this is set, only items that match the\nCSS selector are selectable.",
+          "type": "string"
+        },
+        {
+          "name": "selectedClass",
+          "description": "The class to set on elements when selected.",
+          "type": "string",
+          "default": "\"selected\""
+        },
+        {
+          "name": "selectedAttribute",
+          "description": "The attribute to set on elements when selected.",
+          "type": "string"
+        },
+        {
+          "name": "fallbackSelection",
+          "description": "Default fallback if the selection based on selected with `attrForSelected` is not found.",
+          "type": "string | number"
+        }
+      ],
+      "properties": [
+        {
+          "name": "multi",
+          "attribute": "multi",
+          "description": "If true, multiple selections are allowed.",
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "selectedValues",
+          "description": "Gets or sets the selected elements. This is used instead of `selected`\nwhen `multi` is true.",
+          "type": "HTMLElement[]"
+        },
+        {
+          "name": "selectedItems",
+          "description": "An array of currently selected items.",
+          "type": "array"
+        },
+        {
+          "name": "onselectedvalueschanged",
+          "description": "Registers a callback function for `selectedvalues-changed` event",
+          "type": "EventListener | null"
+        },
+        {
+          "name": "onselectedvalueschange",
+          "description": "Registers a callback function for `selectedvalueschange` event",
+          "type": "EventListener | null"
+        },
+        {
+          "name": "onselecteditemschanged",
+          "description": "Registers a callback function for `selecteditems-changed` event",
+          "type": "EventListener | null"
+        },
+        {
+          "name": "onselecteditemschange",
+          "description": "Registers a callback function for `selecteditemschange` event",
+          "type": "EventListener | null"
+        },
+        {
+          "name": "attrForSelected",
+          "attribute": "attrForSelected",
+          "description": "If you want to use an attribute value or property of an element for\n`selected` instead of the index, set this to the name of the attribute\nor property. Hyphenated values are converted to camel case when used to\nlook up the property of a selectable element. Camel cased values are\n*not* converted to hyphenated values for attribute lookup. It's\nrecommended that you provide the hyphenated form of the name so that\nselection works in both cases. (Use `attr-or-property-name` instead of\n`attrOrPropertyName`.)",
+          "type": "string"
+        },
+        {
+          "name": "selected",
+          "attribute": "selected",
+          "description": "Gets or sets the selected element. The default is to use the index of the item.",
+          "type": "string | number"
+        },
+        {
+          "name": "selectedItem",
+          "description": "Returns the currently selected item.",
+          "type": "HTMLElement | undefined"
+        },
+        {
+          "name": "activateEvent",
+          "attribute": "activateEvent",
+          "description": "The event that fires from items when they are selected. Selectable\nwill listen for this event from items and update the selection state.\nSet to empty string to listen to no events.",
+          "type": "string",
+          "default": "\"click\""
+        },
+        {
+          "name": "selectable",
+          "attribute": "selectable",
+          "description": "This is a CSS selector string.  If this is set, only items that match the\nCSS selector are selectable.",
+          "type": "string"
+        },
+        {
+          "name": "selectedClass",
+          "attribute": "selectedClass",
+          "description": "The class to set on elements when selected.",
+          "type": "string",
+          "default": "\"selected\""
+        },
+        {
+          "name": "selectedAttribute",
+          "attribute": "selectedAttribute",
+          "description": "The attribute to set on elements when selected.",
+          "type": "string"
+        },
+        {
+          "name": "fallbackSelection",
+          "attribute": "fallbackSelection",
+          "description": "Default fallback if the selection based on selected with `attrForSelected` is not found.",
+          "type": "string | number"
+        },
+        {
+          "name": "items",
+          "description": "The list of items from which a selection can be made.",
+          "type": "HTMLElement[]"
+        },
+        {
+          "name": "onselectedchanged",
+          "type": "EventListener"
+        },
+        {
+          "name": "onselectedchange",
+          "type": "EventListener"
+        },
+        {
+          "name": "onselecteditemchanged",
+          "type": "EventListener"
+        },
+        {
+          "name": "onselecteditemchange",
+          "type": "EventListener"
+        },
+        {
+          "name": "onitemschanged",
+          "type": "EventListener"
+        },
+        {
+          "name": "onitemschange",
+          "type": "EventListener"
+        },
+        {
+          "name": "onselect",
+          "type": "EventListener"
+        },
+        {
+          "name": "ondeselect",
+          "type": "EventListener"
+        },
+        {
+          "name": "onactivate",
+          "type": "EventListener"
+        }
+      ],
+      "events": [
+        {
+          "name": "selected-changed"
+        },
+        {
+          "name": "selectedchange"
+        },
+        {
+          "name": "selecteditem-changed"
+        },
+        {
+          "name": "selecteditemchange"
+        },
+        {
+          "name": "items-changed"
+        },
+        {
+          "name": "itemschange"
+        },
+        {
+          "name": "select"
+        },
+        {
+          "name": "deselect"
+        },
+        {
+          "name": "activate"
+        }
+      ]
+    }
+  ]
+}

@@ -5,6 +5,17 @@ interface SelectableMixinConstructor {
   new(...args: any[]): SelectableMixin;
 }
 
+/**
+ * @fires selected-changed
+ * @fires selectedchange
+ * @fires selecteditem-changed
+ * @fires selecteditemchange
+ * @fires items-changed
+ * @fires itemschange
+ * @fires select
+ * @fires deselect
+ * @fires activate
+ */
 interface SelectableMixin {
   /**
    * If you want to use an attribute value or property of an element for
@@ -15,11 +26,13 @@ interface SelectableMixin {
    * recommended that you provide the hyphenated form of the name so that
    * selection works in both cases. (Use `attr-or-property-name` instead of
    * `attrOrPropertyName`.)
+   * @attribute
    */
   attrForSelected: string;
 
   /**
    * Gets or sets the selected element. The default is to use the index of the item.
+   * @attribute
    */
   selected: string|number;
 
@@ -35,12 +48,14 @@ interface SelectableMixin {
    * Set to empty string to listen to no events.
    *
    * @default click
+   * @attribute
    */
   activateEvent: string;
 
   /**
    * This is a CSS selector string.  If this is set, only items that match the
    * CSS selector are selectable.
+   * @attribute
    */
   selectable: string;
 
@@ -48,16 +63,19 @@ interface SelectableMixin {
    * The class to set on elements when selected.
    *
    * @default selected
+   * @attribute
    */
   selectedClass: string;
 
   /**
    * The attribute to set on elements when selected.
+   * @attribute
    */
   selectedAttribute: string;
 
   /**
    * Default fallback if the selection based on selected with `attrForSelected` is not found.
+   * @attribute
    */
   fallbackSelection: string|number;
 
@@ -199,7 +217,7 @@ interface SelectableMixin {
   _updateSelected(): void;
 
   /**
-   * Applies selection to the `seleced` item
+   * Applies selection to the `selected` item
    * @param selected Currently selected value
    */
   _selectSelected(selected: string|number): void;

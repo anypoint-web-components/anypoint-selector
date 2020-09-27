@@ -1,13 +1,14 @@
-import { SelectableMixinConstructor } from './SelectableMixin';
+import { SelectableMixinConstructor, SelectableMixin } from './SelectableMixin';
 
 declare function MultiSelectableMixin<T extends new (...args: any[]) => {}>(base: T): T & SelectableMixinConstructor & MultiSelectableMixinConstructor;
 interface MultiSelectableMixinConstructor {
   new(...args: any[]): MultiSelectableMixin;
 }
 
-interface MultiSelectableMixin {
+interface MultiSelectableMixin extends SelectableMixin {
   /**
    * If true, multiple selections are allowed.
+   * @attribute
    */
   multi?: boolean;
   /**
@@ -18,8 +19,8 @@ interface MultiSelectableMixin {
   /**
    * An array of currently selected items.
    */
-  selectedItems: HTMLElement[];
-  _selectedItems: HTMLElement[];
+  selectedItems: any[];
+  _selectedItems: any[];
 
   /**
    * Registers a callback function for `selectedvalues-changed` event
