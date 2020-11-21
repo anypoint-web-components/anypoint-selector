@@ -1,7 +1,12 @@
 import { fixture, assert, nextFrame } from '@open-wc/testing';
 import '../anypoint-selector.js';
 
+/** @typedef {import('../index').AnypointSelector} AnypointSelector */
+
 describe('AnypointSelector', () => {
+  /**
+   * @returns {Promise<AnypointSelector>}
+   */
   async function singleFixture() {
     return fixture(`<anypoint-selector selected="0">
       <div>Item 0</div>
@@ -12,6 +17,9 @@ describe('AnypointSelector', () => {
     </anypoint-selector>`);
   }
 
+  /**
+   * @returns {Promise<AnypointSelector>}
+   */
   async function multiFixture() {
     return fixture(`<anypoint-selector multi>
       <div>Item 0</div>
@@ -101,6 +109,60 @@ describe('AnypointSelector', () => {
       element.onselectedchange = f2;
       element.selected = 1;
       element.onselectedchange = null;
+      assert.isFalse(called1);
+      assert.isTrue(called2);
+    });
+  });
+
+  describe('onselected', () => {
+    let element = /** @type AnypointSelector */ (null);
+    beforeEach(async () => {
+      element = await singleFixture();
+    });
+
+    it('returns previously registered handler', () => {
+      assert.equal(element.onselected, null);
+      const f = () => {};
+      element.onselected = f;
+      assert.isTrue(element.onselected === f);
+    });
+
+    it('calls the registered function through the activation event', () => {
+      let called = false;
+      const f = () => {
+        called = true;
+      };
+      element.onselected = f;
+      const item = element.querySelectorAll('div')[1];
+      item.click();
+      element.onselected = null;
+      assert.isTrue(called);
+    });
+
+    it('ignores the call to the registered function through selection change', () => {
+      let called = false;
+      const f = () => {
+        called = true;
+      };
+      element.onselected = f;
+      element.selected = 1;
+      element.onselected = null;
+      assert.isFalse(called);
+    });
+
+    it('unregisteres old function', () => {
+      let called1 = false;
+      let called2 = false;
+      const f1 = () => {
+        called1 = true;
+      };
+      const f2 = () => {
+        called2 = true;
+      };
+      element.onselected = f1;
+      element.onselected = f2;
+      element._itemActivate(1);
+      element.onselected = null;
       assert.isFalse(called1);
       assert.isTrue(called2);
     });

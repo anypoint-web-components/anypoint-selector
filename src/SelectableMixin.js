@@ -347,6 +347,24 @@ const mxFunction = (base) => {
     }
 
     /**
+     * @return {EventListener} Previously registered handler for `selected-changed` event
+     */
+    get onselected() {
+      return this._onselected;
+    }
+
+    /**
+     * Registers a callback function for `selected` event.
+     * 
+     * This event is dispatched only through user interaction (the activateEvent). Dispatched after the `select` event.
+     * 
+     * @param {EventListener} value A callback to register. Pass `null` or `undefined` to clear the listener.
+     */
+    set onselected(value) {
+      this._registerCallback('selected', value);
+    }
+
+    /**
      * @return {EventListener} Previously registered handler for `selectedchange` event
      */
     get onselecteditemchanged() {
@@ -479,6 +497,7 @@ const mxFunction = (base) => {
       this._onselectedchange = null;
       this._onselecteditemchange = null;
       this._onitemschange = null;
+      this._onselected = null;
     }
 
     connectedCallback() {
@@ -918,6 +937,7 @@ const mxFunction = (base) => {
         return;
       }
       this.select(value);
+      this.dispatchEvent(new CustomEvent('selected'));
     }
   }
   return SelectableMixinImpl;

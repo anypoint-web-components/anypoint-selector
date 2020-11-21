@@ -12,9 +12,10 @@ interface SelectableMixinConstructor {
  * @fires selecteditemchange
  * @fires items-changed
  * @fires itemschange
- * @fires select
- * @fires deselect
- * @fires activate
+ * @fires select When an item is selected. This also is dispatched when the `selected` property is set.
+ * @fires deselect When an item is deselected. This also is dispatched when the `selected` property is set.
+ * @fires activate When an item is about to be selected. Cancelling this event cancels the selection.
+ * @fires selected This is dispatched only through user interaction (the activateEvent). Dispatched after the `select` event.
  */
 interface SelectableMixin {
   /**
@@ -87,25 +88,29 @@ interface SelectableMixin {
 
   /**
    * @returns Previously registered handler for `selected-changed` event
+   * @deprecated
    */
   onselectedchanged: EventListener;
   /**
    * @returns Previously registered handler for `selectedchange` event
+   * @deprecated
    */
   onselectedchange: EventListener;
-
   /**
    * @returns Previously registered handler for `selecteditem-changed` event
+   * @deprecated
    */
   onselecteditemchanged: EventListener;
 
   /**
    * @returns Previously registered handler for `selecteditemchange` event
+   * @deprecated
    */
   onselecteditemchange: EventListener;
 
   /**
    * @returns Previously registered handler for `items-changed` event
+   * @deprecated
    */
   onitemschanged: EventListener;
 
@@ -128,6 +133,11 @@ interface SelectableMixin {
    * @returns Previously registered handler for `activate` event
    */
   onactivate: EventListener;
+
+  /**
+   * @returns Previously registered handler for `selected` event
+   */
+  onselected: EventListener;
 
   _selection: AnypointSelection;
 
