@@ -127,3 +127,19 @@
 * fixing type export [6db2376](https://github.com/anypoint-web-components/anypoint-selector/commit/6db2376a222a5cde72a0959f9733963409c57ece) by Pawel
 
 
+<a name="1.1.6"></a>
+## [1.1.6](https://github.com/anypoint-web-components/anypoint-selector/compare/1.1.4...1.1.6) (2020-11-21)
+
+### Update
+
+* upgarding test framework [0918995](https://github.com/anypoint-web-components/anypoint-selector/commit/091899590740bff963a152ec1c0f495557139fb4) by Pawel
+* [ci skip] automated merge master->stage. syncing main branches [047ac01](https://github.com/anypoint-web-components/anypoint-selector/commit/047ac01c46a4975d46ff3acb287634a8d00a96a6) by Ci agent
+* adding better ts support [cd88f55](https://github.com/anypoint-web-components/anypoint-selector/commit/cd88f5527ddc0cf4ec2af7ada62a10764b140974) by Pawel
+* [ci skip] automated merge master->stage. syncing main branches [3581dd4](https://github.com/anypoint-web-components/anypoint-selector/commit/3581dd4e087ecbd2d41ece5d82a76b14444866b0) by Ci agent
+
+
+### Features
+
+* adding the `selected` event [4e5a5ff](https://github.com/anypoint-web-components/anypoint-selector/commit/4e5a5ff74321bfd5261b2af2567180d8934cceb7) by Pawel
+
+
