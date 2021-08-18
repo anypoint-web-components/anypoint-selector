@@ -34,13 +34,9 @@ const normalizedMatchesSelector =
  * @param {string} selector Selector to match
  * @return {boolean} True if node matched selector
  */
-export const matchesSelector = (node, selector) => {
-  return normalizedMatchesSelector.call(node, selector);
-};
+export const matchesSelector = (node, selector) => normalizedMatchesSelector.call(node, selector);
 
-const filterItem = (node) => {
-  return !excludedLocalNames[node.localName];
-};
+const filterItem = (node) => !excludedLocalNames[node.localName];
 
 const toggleClass = (klass, selected, node) => {
   if (selected) {
@@ -201,6 +197,8 @@ const mxFunction = (base) => {
       const old = this._selected;
       /* istanbul ignore if */
       if (old === value) {
+        const detail = { bubbles: true, composed: true };
+        this.dispatchEvent(new CustomEvent('closed', detail));
         return;
       }
       this._selected = value;
