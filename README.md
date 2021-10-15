@@ -1,10 +1,8 @@
-[![Published on NPM](https://img.shields.io/npm/v/@anypoint-web-components/anypoint-selector.svg)](https://www.npmjs.com/package/@anypoint-web-components/anypoint-selector)
+# Deprecated
 
-[![Build Status](https://travis-ci.com/anypoint-web-components/anypoint-selector.svg)](https://travis-ci.com/anypoint-web-components/anypoint-selector)
+This component has been moved to `anypoint-web-components/awc`.
 
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/anypoint-web-components/anypoint-selector)
-
-# anypoint-selector
+-----
 
 This is a port of [iron-selector](https://github.com/PolymerElements/iron-selector) that works with LitElement and ES6 classes, originally developed by Polymer team.
 
@@ -33,10 +31,10 @@ It also includes the `selectedItems` and `selectedValues` properties for working
 
 The element has no own shadow DOM. Items are rendered as is. The element also covers a case where the selector is used in another custom element and a `<slot>` is passed as a child (e.g. dropdown list wit children defined in light DOM).
 
-
 ## Usage
 
 ### Installation
+
 ```
 npm install --save @anypoint-web-components/anypoint-selector
 ```
